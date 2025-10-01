@@ -11,26 +11,26 @@
 	<groupId>com</groupId>
 	<artifactId>sample2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 	<name>sample2</name>
 	<description>RabbitMQ Configuration application </description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
+	<modules>
+		<module>notification-service</module>
+		<!-- <module>rabbitMQ-configuration</module> -->
+		<module>registration-service</module>
+	</modules>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-dependencies</artifactId>
+			<version>3.1.0</version> 
+			<type>pom</type>
+			<scope>import</scope>
+            </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>

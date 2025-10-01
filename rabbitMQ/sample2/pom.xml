@@ -17,7 +17,7 @@
 
 	<modules>
 		<module>notification-service</module>
-		<!-- <module>rabbitMQ-configuration</module> -->
+		<module>rabbitmq</module>
 		<module>registration-service</module>
 	</modules>
 	<properties>

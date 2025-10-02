@@ -18,10 +18,10 @@ spring.rabbitmq.username=guest
 spring.rabbitmq.password=guest
 ```
 
-curl -X POST http://localhost:1234/api/registration/register \
+curl -X POST http://localhost:8080/api/registration/register \
   -H "Content-Type: application/json" \
   -d '{
-    "username": "testuser",
-    "email": "test@example.com",
+    "username": "viarony",
+    "email": "victorpaularony@gmail.com",
     "password": "password123"
   }'

@@ -23,8 +23,7 @@ public class RegistrationService {
 
     @Transactional
     public User registerUser(UserRequest request) {
-        System.out.println("Registering user: " + request.getUsername());
-        
+
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new FieldAlreadyExistsException("email", request.getEmail());
         }
@@ -48,7 +47,6 @@ public class RegistrationService {
         event.setEmail(savedUser.getEmail());
 
         registrationMessageProducer.sendRegistrationEvent(event);
-        System.out.println("ok");
 
         return savedUser;
     }

@@ -32,6 +32,7 @@ public class NotificationService {
                 event.getUsername()));
 
         javaMailSender.send(message);
+        log.info("Email sent successfully to {}", event.getEmail());
         } catch (Exception e) {
             log.error("Failed to send email to {}: {}", event.getEmail(), e.getMessage());
         }

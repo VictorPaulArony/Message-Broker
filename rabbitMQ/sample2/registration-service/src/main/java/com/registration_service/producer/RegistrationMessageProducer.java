@@ -19,7 +19,7 @@ public class RegistrationMessageProducer {
 
     public void sendRegistrationEvent(UserRegistrationEvent event) {
         rabbitTemplate.convertAndSend(
-            rabbitMQConfiguration.getQueue(),
+            rabbitMQConfiguration.getTopicExchange(),
             rabbitMQConfiguration.getRoutingKey(),
             event
         );
